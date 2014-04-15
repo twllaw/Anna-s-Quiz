@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>A Quiz for Anna!</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="jquery.mobile-1.2.0/jquery.mobile-1.2.0.css" />
+    <script src="jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="jquery.mobile-1.2.0/jquery.mobile-1.2.0.js"></script>
+</head> 
+    <body> 
+        <script type="text/javascript" src="test.js"></script>
+        <div data-role="page" id="qThree" data-theme="a">
+            <div data-role="header" data-theme="a">
+                <h1>Question 3</h1>
+                <a href="index.html" data-icon="home" data-iconpos="notext" >Home</a>
+            </div><!-- /header -->
+        
+            <div data-role="content" data-theme="a">           
+                <fieldset data-role="controlgroup">
+                    <legend><b>Where did we go for our very first overnight trip?</b></legend>
+                        <input type="radio" name="qThreeOptions" id="radio-choice-1" value="0" checked="checked" />
+                        <label for="radio-choice-1">Gold Coast</label>
+                
+                        <input type="radio" name="qThreeOptions" id="radio-choice-2" value="0"  />
+                        <label for="radio-choice-2">Melbourne</label>
+                
+                        <input type="radio" name="qThreeOptions" id="radio-choice-3" value="0"  />
+                        <label for="radio-choice-3">Nelson Bay</label>
+                
+                        <input type="radio" name="qThreeOptions" id="radio-choice-4" value="1"  />
+                        <label for="radio-choice-4">Newcastle</label>
+                </fieldset>         
+                <a id="btnSelect" data-role="button" data-inline="true">Next!</a>
+            </div><!-- /content -->
+        
+        </div><!-- /page -->
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>A Quiz for Anna!</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="jquery.mobile-1.2.0/jquery.mobile-1.2.0.css" />
+    <script src="jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="jquery.mobile-1.2.0/jquery.mobile-1.2.0.js"></script>
+	<script type="text/javascript" src="test.js"></script>
+</head>
+
+<body> 
+<div data-role="page" id="result" data-theme="c">
+
+	<div data-role="header" data-theme="c">
+		<h1>A Quiz for Anna</h1>
+		<a href="index.html" data-icon="home" data-iconpos="notext" >Home</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="c">	   	    
+        <p id="score"></p>
+        <p id="summary"></p>
+        <script>
+            document.getElementById("score").innerHTML="<b>You've scored " + GetCorrectAnswerCount() + " out of 10!</b>";    
+            
+            if (GetResultGrade() == 'A') {
+                document.getElementById("summary").innerHTML="WOW! Now that's perfection!! You totally deserve this prize! :D";              
+            }
+            else if (GetResultGrade() == 'B') {
+                document.getElementById("summary").innerHTML="Very impressive!! Hope you'll like the prize!";              
+            }
+            else if (GetResultGrade() == 'C') {
+                document.getElementById("summary").innerHTML="Not bad I guess...Enjoy the prize!";              
+            }
+            else if (GetResultGrade() == 'D') {
+                document.getElementById("summary").innerHTML="Umm...what happened? :/ Guess I'll give you the prize anyway because you're my gf :P";              
+            }
+            else if (GetResultGrade() == 'E') {
+                document.getElementById("summary").innerHTML="Hmm you must be really drunk right now to get such a terrible score XD Here's a prize for consuming alcohol!";
+            }
+            else {
+                document.getElementById("summary").innerHTML="Wow, it takes some tremendous skills to score a zero! You've earned this prize!!";   
+            }
+        </script> 				
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+</body>
+</html>

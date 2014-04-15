@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>A Quiz for Anna!</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="jquery.mobile-1.2.0/jquery.mobile-1.2.0.css" />
+    <script src="jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="jquery.mobile-1.2.0/jquery.mobile-1.2.0.js"></script>
+</head> 
+    <body> 
+        <script type="text/javascript" src="test.js"></script>
+        <div data-role="page" id="aSix" data-theme="a">
+            <div data-role="header" data-theme="a">
+                <h1>Question 6</h1>
+                <a href="index.html" data-icon="home" data-iconpos="notext" >Home</a>
+            </div><!-- /header -->
+        
+            <div data-role="content" data-theme="a">           
+                <fieldset data-role="controlgroup">
+                    <legend><b>Where in Japan haven't we been to together?</b></legend>
+                    <p>Correct answer: Tokyo</p>
+                    <p id="phrase6"></p>
+                    <script>
+                       if (sessionStorage.getItem('qSixAnswer') == '1') {
+                           document.getElementById("phrase6").innerHTML="<hr><p>That wasn't too tricky, was it?</p>" + 
+                                "<p><img src = \"images/q6r.jpg\" alt = \"q6r\" /></p>";
+                       } 
+                       else {
+                           document.getElementById("phrase6").innerHTML="<hr><p>You should've read the question more carefully!!!</p>" + 
+                                "<p><img src = \"images/q6w.jpg\" alt = \"q6w\" /></p>";                        
+                       }
+                    </script>  
+                </fieldset>         
+                <a id="btnSelect" href="answer7.html" data-role="button" data-transition="slide" data-inline="true">Next!</a>
+            </div><!-- /content -->
+        
+        </div><!-- /page -->
+    </body>
+</html>
